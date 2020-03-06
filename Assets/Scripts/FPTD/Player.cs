@@ -6,7 +6,7 @@ namespace FPTD {
 public class Player : MonoBehaviour
 {
     public float speed = 1f;
-        public float torque = 10f;
+        public float torque = 100f;
 
         // Start is called before the first frame update
         void Start()
@@ -22,8 +22,16 @@ public class Player : MonoBehaviour
         pos *= speed * Time.deltaTime;
 
         transform.position += pos;
-    }
 
+            float angle = Input.GetAxis("Mouse X");
+            angle *= torque * Time.deltaTime;
+
+            // if (Input.GetAxis("Mouse Y") != 0f) {
+            transform.Rotate(Vector3.up, angle);
+            //}
+
+        }
+        /*
         void LateUpdate()
         {
             float angle = Input.GetAxis("Mouse X");
@@ -32,7 +40,7 @@ public class Player : MonoBehaviour
             // if (Input.GetAxis("Mouse Y") != 0f) {
             transform.Rotate(Vector3.up, angle);
             //}
-        }
+        }*/
 
     }
 }

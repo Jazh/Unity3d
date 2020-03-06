@@ -32,8 +32,8 @@ namespace FPTD
              //   transform.Rotate(Vector3.right, angle);
             //}
 
-            Quaternion rot = transform.rotation;
-            Vector3 angel = rot.eulerAngles;
+            //Quaternion rot = transform.rotation;
+            //Vector3 angel = rot.eulerAngles;
 
             //angle.x = Mathf.Clamp(rot.eulerAngles.x, -50f, 50);
 
